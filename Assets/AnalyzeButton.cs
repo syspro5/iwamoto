@@ -21,12 +21,12 @@ public class AnalyzeButton : MonoBehaviour
 
     public InputField InputField_outputPose3d;
     
-
+    
     void Start()
     {
-        strBatFilePath = Application.dataPath + @"/Resources/ExecuteAnalyzing.bat";//"@c:/users/iwmtt/desktop/extLib/ExecuteAnalyzing.bat";
-        strOpenposePath =  @"c:/users/iwmtt/desktop/extLib/openpose";//Application.dataPath + @"/Resources/openpose";
-        strLiftingPath = @"c:/users/iwmtt/desktop/extLib/Lifting";//Application.dataPath + @"/Resources/Lifting";
+        strBatFilePath = Application.dataPath + @"/Resources/ExecuteAnalyzing.bat";//"@c:/users/%username%/desktop/extLib/ExecuteAnalyzing.bat";
+        strOpenposePath = @"c:/users/%username%/desktop/extLib/openpose";//Application.dataPath + @"/Resources/openpose";
+        strLiftingPath = @"c:/users/%username%/desktop/extLib/Lifting-from-the-Deep-release";//Application.dataPath + @"/Resources/Lifting";
 
 
     }

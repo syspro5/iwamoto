@@ -49,6 +49,8 @@ public class csv2pose : MonoBehaviour
     public GameObject model_uLegR;
 
     public float Yoffset = 1.0f;
+    public float screenXscale = 1280.0f;
+    public float screenYscale = 720.0f;
 
     public bool isAnalyzed = false;
 
@@ -83,7 +85,8 @@ public class csv2pose : MonoBehaviour
             string[] stArrayData = tmpFixedUpdateLine.Split(',');
 
             //spine
-            Vector3 posspine = new Vector3(float.Parse(stArrayData[0]), float.Parse(stArrayData[17]) + Yoffset, float.Parse(stArrayData[34]));
+            //Vector3 posspine = new Vector3(float.Parse(stArrayData[0]), float.Parse(stArrayData[17]) + Yoffset, float.Parse(stArrayData[34]));
+            Vector3 posspine = new Vector3(float.Parse(stArrayData[51]) / screenXscale * (-2.0f) + 1.0f, float.Parse(stArrayData[52]) / screenYscale + Yoffset, float.Parse(stArrayData[34]));
             spine.transform.position = posspine;
 
             //vectors

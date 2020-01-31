@@ -14,7 +14,7 @@ set dateData=%DATE:/=%%time:~0,2%%time:~3,2%%time:~6,2%
 
 
 cd %OpenPoseDir%
-call .\bin\OpenPoseDemo.exe --video %VideoPath% --net_resolution 176x128 --write_json .\output\%dateData%
+call .\bin\OpenPoseDemo.exe --video %VideoPath% --write_json .\output\%dateData% rem --net_resolution 176x128 
 
 echo finish outputting json
 
@@ -37,4 +37,4 @@ echo finish outputting 3dpose
 
 set ERRORLEVEL=C:\Users\%username%\Desktop\pose3ds%dateData%.csv
 
-exit
+pause
